@@ -18,7 +18,7 @@
 **Multi-source cognition engine for grounded retrieval intelligence.**
 
 ## Vision
-Synapsara is a production-oriented skill in the **smouj SuperAgents Universe**. It is designed to solve a concrete operational problem with local-first execution, transparent reasoning traces, and practical safety controls. The architecture prioritizes free/open-source tooling, deterministic behavior, and modular integration with other autonomous skills.
+Synapsara is a multi-source RAG skill that ingests documents, notes, and external knowledge sources, then returns grounded answers with citations. It focuses on retrieval quality, context relevance, and transparent reasoning over private and public datasets.
 
 ## Core Superpower
 - ⚡ **Cross-source retrieval fusion with confidence scoring**
