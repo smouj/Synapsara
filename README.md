@@ -1,5 +1,9 @@
 # Synapsara
 
+<p align="center">
+  <img src="./assets/branding/logo.svg" alt="Synapsara logo" width="88" />
+</p>
+
 ![Language](https://img.shields.io/badge/language-Python%203.11%2B-blue)
 ![License](https://img.shields.io/github/license/smouj/Synapsara)
 ![Last Commit](https://img.shields.io/github/last-commit/smouj/Synapsara)
