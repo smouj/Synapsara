@@ -1,0 +1,1 @@
+"""Synapsara package."""
