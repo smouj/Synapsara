@@ -1,13 +1,13 @@
 # Synapsara
 
 <p align="center">
-  <img src="./assets/branding/logo.svg" alt="Synapsara logo" width="88" />
+  <img src="./assets/branding/logo.svg" alt="Logo de Synapsara" width="88" />
 </p>
 
 ![Language](https://img.shields.io/badge/language-Python%203.11%2B-blue)
 ![License](https://img.shields.io/github/license/smouj/Synapsara)
 ![Last Commit](https://img.shields.io/github/last-commit/smouj/Synapsara)
-![CI](https://img.shields.io/badge/CI-planned-lightgrey)
+![CI](https://img.shields.io/github/actions/workflow/status/smouj/Synapsara/ci.yml?branch=main)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20this%20project-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/smouj013_dev)
 
 <p align="center">
@@ -15,63 +15,44 @@
   <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
 </p>
 
-**Multi-source cognition engine for grounded retrieval intelligence.**
+**Multi-source RAG intelligence with grounded local retrieval.**
 
 ## Visión
-Synapsara es una skill RAG multi-fuente que ingesta documentos, notas y fuentes externas, y devuelve respuestas fundamentadas con citas. Se centra en calidad de recuperación, relevancia de contexto y razonamiento transparente sobre datos privados y públicos.
+Indexes heterogeneous local sources and returns citation-backed semantic answers.
+
+## Problema que resuelve
+Knowledge is fragmented across documents, notes, and archives.
 
 ## Superpoder principal
-- ⚡ **Cross-source retrieval fusion with confidence scoring**
+- ⚡ **Hybrid retrieval with source attribution and contextual query understanding**
 
-## Estado actual (Febrero 2026)
-- 🚧 Fase de ideación y scaffolding robusto
-- Próximos hitos:
-  - [ ] Finalizar contratos de dominio e interfaces
-  - [ ] Publicar un comando CLI mínimo ejecutable
-  - [ ] Añadir perfil de modelo local Ollama y estrategia de fallback
-  - [ ] Implementar un ejemplo completo end-to-end
-  - [ ] Añadir puertas de calidad (lint, typecheck, test)
-  - [ ] Publicar arquitectura y runbook operativo
-
-## Arquitectura planeada (stack gratuito/open-source)
-- **Lenguaje principal:** Python 3.11+
-- **Framework agente:** LlamaIndex
-- **Modelos locales:** Ollama (Llama 3.1, Qwen2.5, DeepSeek-Coder, Mistral)
-- **Dependencias clave:** llama-index, chromadb, sentence-transformers, fastapi, pydantic
-- **Modelo de ejecución:** local-first, despliegue self-hosted opcional
-
-## Blueprint de capacidades
-- ✅ Connector orchestration
-- ✅ Chunking profiles
-- ✅ Hybrid retrieval
-- ✅ Citation tracing
-- ✅ Freshness-aware ranking
+## Casos de uso clave
+- ✅ Personal knowledge search
+- ✅ Document Q&A
+- ✅ Cross-source synthesis
+- ✅ Evidence-first responses
 
 
-## Estructura del proyecto
-```text
-Synapsara/
-├── src/synapsara/
-│   ├── core/           # orquestación de dominio y políticas
-│   ├── adapters/       # integraciones externas y puentes de herramientas
-│   ├── memory/         # estado, recuperación y estrategias de contexto
-│   └── cli.py          # interfaz de comandos local para operación
-├── docs/
-│   ├── IMPLEMENTATION.md
-│   ├── ARCHITECTURE.md
-│   └── RUNBOOK.md
-├── examples/
-├── tests/
-├── requirements.txt
-└── README.md
-```
+## Superficie API
+`POST /query`, `GET /health`
+
+## Stack técnico
+- **Stack base:** FastAPI + ChromaDB + sentence-transformers
+- **Ejecución:** local-first, apto para self-hosting
+- **Infra:** compatibilidad con Docker Compose + Caddy + Redis/Chroma/Ollama
+
+## Estado actual (Feb 2026)
+- ✅ Scaffold público disponible
+- ✅ README bilingüe (EN por defecto + ES)
+- ✅ Base de CI + release configurada
+- 🚧 Endurecimiento de funcionalidades en progreso
 
 ## Inicio rápido
 ```bash
 git clone https://github.com/smouj/Synapsara.git
 cd Synapsara
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 python -m src.synapsara.cli --help
 ```
@@ -83,10 +64,9 @@ python -m src.synapsara.cli --help
 - [Guía de despliegue](./docs/DEPLOYMENT.md)
 - [Proceso de releases](./docs/RELEASE.md)
 - [Changelog](./CHANGELOG.md)
-- [Contribución](./CONTRIBUTING.md)
 
 ## Contribución
-Las contribuciones son bienvenidas. Lee **CONTRIBUTING.md** antes de abrir issues o PRs.
+Las contribuciones son bienvenidas. Lee [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Licencia
 MIT © 2026 smouj
